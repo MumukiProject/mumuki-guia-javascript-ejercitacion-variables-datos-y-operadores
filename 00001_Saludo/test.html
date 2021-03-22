@@ -47,9 +47,10 @@ it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
   _dispatch_('load', window)
   
 
-  _shiftPromptMessages_().should.eql("Decinos tu nombre");
-  _shiftPromptMessages_().should.eql("Decinos tu apellido");  
+   "Decinos tu nombre".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
+  "Decinos tu apellido".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
   
-  _last_alert_message_.should.eql('Hola Ada Lovelace, bienvenida a Ada')
+  'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_last_alert_message_)
+
 
 });/*#tests>*/
