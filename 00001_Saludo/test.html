@@ -1,10 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/function foo() {
-  /*...content[index.js]...*/
-  
-}
-
-global.__prompt_messages__ = [];
+/*<tests#*/global.__prompt_messages__ = [];
 Object.defineProperty(global, '_last_prompt_message_', {
   set: (message) => {
     global.__prompt_messages__.push(message)
@@ -32,7 +27,7 @@ it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
   _stubPromptResponse_('Perez');
   
 
-  window.programa();
+  _dispatch_('load', window)
   
 
   _shiftPromptMessages_().should.eql("Decinos tu nombre");
