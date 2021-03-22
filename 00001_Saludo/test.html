@@ -44,7 +44,7 @@ it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
   _stubPromptResponse_('Lovelace');
   
 
-  _dispatch_('DOMContentLoaded', window)
+  _dispatch_('load', window)
   
 
   _shiftPromptMessages_().should.eql("Decinos tu nombre");
