@@ -27,7 +27,7 @@ it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
   _stubPromptResponse_('Perez');
   
 
-  _dispatch_('load', window)
+  _dispatch_('DOMContentLoaded', window)
   
 
   _shiftPromptMessages_().should.eql("Decinos tu nombre");
@@ -44,7 +44,7 @@ it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
   _stubPromptResponse_('Lovelace');
   
 
-  window.programa();
+  _dispatch_('DOMContentLoaded', window)
   
 
   _shiftPromptMessages_().should.eql("Decinos tu nombre");
