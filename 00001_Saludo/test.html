@@ -1,10 +1,9 @@
 /*<output#*//*#output>*/
-/*<tests#*/
-it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
+/*<tests#*/it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
 
   global._prompt_response_ = "Dani";
   
-  programa();
+  window.programa();
   
   _last_prompt_message_.should.eql("lalal");
   
