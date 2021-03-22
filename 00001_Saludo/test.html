@@ -1,5 +1,9 @@
 /*<output#*//*#output>*/
-/*<tests#*/global.__prompt_messages__ = [];
+/*<tests#*/function foo() {
+  
+}
+
+global.__prompt_messages__ = [];
 Object.defineProperty(global, '_last_prompt_message_', {
   set: (message) => {
     global.__prompt_messages__.push(message)
