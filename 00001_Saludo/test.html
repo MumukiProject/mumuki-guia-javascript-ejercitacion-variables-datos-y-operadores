@@ -30,10 +30,10 @@ it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
   _dispatch_('load', window)
   
 
-  _shiftPromptMessages_().should.eql("Decinos tu nombre");
-  _shiftPromptMessages_().should.eql("Decinos tu apellido");  
+  "Decinos tu nombre".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
+  "Decinos tu apellido".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
   
-  _last_alert_message_.should.eql('Hola Feli Perez, bienvenida a Ada')
+  'Hola Feli Perez, bienvenida a Ada'.should.eql(_last_alert_message_)
 
 });
 
