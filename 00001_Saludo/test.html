@@ -1,9 +1,14 @@
 /*<output#*//*#output>*/
-/*<tests#*/it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
+/*<tests#*/function program() {
+  /*...content...*/
+}
+
+it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
+
   global._prompt_response_ = "Dani";
   
-  _dispatch_('load', document);
-
+  program();
+  
   _last_prompt_message_.should.eql("lalal");
   
 
