@@ -23,12 +23,12 @@ function _shiftPromptMessages_() {
 
 it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
   
-
-  window.programa();
-  
   
   _stubPromptResponse_('Feli');
   _stubPromptResponse_('Perez');
+  
+
+  window.programa();
   
 
   _shiftPromptMessages_().should.eql("Decinos tu nombre");
