@@ -1,0 +1,24 @@
+<script>
+  global.__prompt_messages__ = [];
+Object.defineProperty(global, '_last_prompt_message_', {
+  set: (message) => {
+    global.__prompt_messages__.push(message)
+  },
+  get: () =>
+    global.__prompt_messages__[global.__prompt_messages__.length -1]
+});
+
+global.__prompt_responses__ = [];
+Object.defineProperty(global, '_prompt_response_', {
+  get: () => global.__prompt_responses__.shift(),
+});
+
+function _stubPromptResponse_(response) {
+  global.__prompt_responses__.push(response);
+}
+
+function _shiftPromptMessages_() {
+  return global.__prompt_messages__.shift();
+}
+
+</script>

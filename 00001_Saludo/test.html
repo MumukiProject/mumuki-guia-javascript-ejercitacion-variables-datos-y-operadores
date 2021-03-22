@@ -1,12 +1,17 @@
 /*<output#*//*#output>*/
 /*<tests#*/it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
-
-  global._prompt_response_ = "Dani";
   
+
   window.programa();
   
-  _last_prompt_message_.should.eql("lalal");
+  
+  _stubPromptResponse_('Feli');
+  _stubPromptResponse_('Perez');
   
 
+  _shiftPromptMessages_().should.eql("Decinos tu nombre");
+  _shiftPromptMessages_().should.eql("Decinos tu apellido");  
   
+  _last_alert_message_.should.eql('Hola Feli Perez, bienvenida a Ada')
+
 });/*#tests>*/
