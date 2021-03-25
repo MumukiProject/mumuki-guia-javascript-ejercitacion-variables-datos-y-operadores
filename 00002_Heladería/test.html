@@ -1,5 +1,58 @@
-describe("Descripción del grupo", function() {
-  it("Descripción del ejemplo", function() {
-    assert(true)
-  })
-})
+/*<output#*//*#output>*/
+/*<tests#*/global.__prompt_messages__ = [];
+Object.defineProperty(global, '_last_prompt_message_', {
+  set: (message) => {
+    global.__prompt_messages__.push(message)
+  },
+  get: () =>
+    global.__prompt_messages__[global.__prompt_messages__.length -1]
+});
+
+global.__prompt_responses__ = [];
+Object.defineProperty(global, '_prompt_response_', {
+  get: () => global.__prompt_responses__.shift(),
+});
+
+function _stubPromptResponse_(response) {
+  global.__prompt_responses__.push(response);
+}
+
+function _shiftPromptMessages_() {
+  return global.__prompt_messages__.shift();
+}
+
+it("Si ingresamos chocolate, frutilla y tramontana, muestra Aquí tiene su helado de chocolate, frutilla y tramontana", function() {
+  
+  _stubPromptResponse_('chocolate');
+  _stubPromptResponse_('frutilla');
+  _stubPromptResponse_('tramontana');
+  
+
+  _dispatch_('load', window)
+  
+
+"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el primer gusto');
+"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el segundo gusto');  
+"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el tercer gusto');  
+
+'Aquí tiene su helado de chocolate, frutilla y tramontana'.should.eql(_last_alert_message_)
+
+});
+
+it("Si ingresamos americana, banana split y mascarpone, muestra Aquí tiene su helado de americana, banana split y mascarpone", function() {
+
+_stubPromptResponse_('americana');
+_stubPromptResponse_('banana split');
+_stubPromptResponse_('mascarpone');
+
+
+_dispatch_('load', window)
+
+"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el primer gusto');
+"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el segundo gusto');  
+"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el tercer gusto');  
+
+'Aquí tiene su helado de americana, banana split y mascarpone'.should.eql(_last_alert_message_)
+
+
+});/*#tests>*/

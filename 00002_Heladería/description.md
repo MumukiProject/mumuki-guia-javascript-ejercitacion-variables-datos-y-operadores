@@ -1,1 +1,9 @@
-Crear un programa que pida al usuario ingresar, por separado, tres gustos de helado, y luego muestre un mensaje que diga, por ejemplo, "Aquí tiene su helado de chocolate, dulce de leche y menta granizada".
+> Crea un programa que permita ingresar por separado, tres gustos de helado mediante un prompt para cada uno con la siguiente frase: "¿Cuál es el primer gusto?", "¿Cuál es el segundo gusto?" y "¿Cuál es el tercer gusto?" respectivamente, y luego muestre un mensaje que diga, "Aquí tiene su helado de {gusto1}, {gusto2} y {gusto3}"
+
+> 
+
+<style>
+  .mu-browser {
+    display: none;
+  }
+</style>
