@@ -5,8 +5,8 @@
   _stubPromptResponse_('Perez');
   
 
-  _dispatch_('load', window)
-  
+  _resetDocument_();
+
   "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
   "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
   
@@ -21,8 +21,7 @@ it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
   _stubPromptResponse_('Lovelace');
   
 
-  _dispatch_('load', window)
-  
+  _resetDocument_();
 
   "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
   "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
