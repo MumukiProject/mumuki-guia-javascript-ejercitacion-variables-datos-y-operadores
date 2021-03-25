@@ -1,27 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/global.__prompt_messages__ = [];
-Object.defineProperty(global, '_last_prompt_message_', {
-  set: (message) => {
-    global.__prompt_messages__.push(message)
-  },
-  get: () =>
-    global.__prompt_messages__[global.__prompt_messages__.length -1]
-});
-
-global.__prompt_responses__ = [];
-Object.defineProperty(global, '_prompt_response_', {
-  get: () => global.__prompt_responses__.shift(),
-});
-
-function _stubPromptResponse_(response) {
-  global.__prompt_responses__.push(response);
-}
-
-function _shiftPromptMessages_() {
-  return global.__prompt_messages__.shift();
-}
-
-it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
+/*<tests#*/it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
   
   _stubPromptResponse_('Feli');
   _stubPromptResponse_('Perez');
@@ -30,10 +8,10 @@ it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
   _dispatch_('load', window)
   
 
-?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
+".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
   "¿Cuál es tu apellido?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
   
-  'Hola Feli Perez, bienvenida a Ada'.should.eql(_last_alert_message_)
+  'Hola Feli Perez, bienvenida a Ada'.should.eql(_shiftAlertMessages_())
 
 });
 
@@ -49,7 +27,7 @@ it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
    "¿Cuál es tu nombre?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
   "¿Cuál es tu apellido?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
   
-  'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_last_alert_message_)
+  'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_shiftAlertMessages_())
 
 
 });/*#tests>*/
