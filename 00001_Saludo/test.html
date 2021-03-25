@@ -8,8 +8,8 @@
   _dispatch_('load', window)
   
 
-".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
-  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
+  "Decinos tu nombre".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
+  "Decinos tu apellido".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
   
   'Hola Feli Perez, bienvenida a Ada'.should.eql(_shiftAlertMessages_())
 
