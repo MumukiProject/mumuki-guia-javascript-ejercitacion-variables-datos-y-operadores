@@ -8,10 +8,10 @@
   _dispatch_('load', window)
   
 
-  "Decinos tu nombre".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
-  "Decinos tu apellido".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
+  "Decinos tu nombre".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
+  "Decinos tu apellido".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
   
-  'Hola Feli Perez, bienvenida a Ada'.should.eql(_shiftAlertMessages_())
+  'Hola Feli Perez, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
 
 });
 
@@ -24,10 +24,10 @@ it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
   _dispatch_('load', window)
   
 
-   "¿Cuál es tu nombre?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el nombre');
-  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el apellido');  
+   "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
+  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
   
-  'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_shiftAlertMessages_())
+  'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
 
 
 });/*#tests>*/
