@@ -1,58 +1,42 @@
 /*<output#*//*#output>*/
-/*<tests#*/global.__prompt_messages__ = [];
-Object.defineProperty(global, '_last_prompt_message_', {
-  set: (message) => {
-    global.__prompt_messages__.push(message)
-  },
-  get: () =>
-    global.__prompt_messages__[global.__prompt_messages__.length -1]
-});
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
 
-global.__prompt_responses__ = [];
-Object.defineProperty(global, '_prompt_response_', {
-  get: () => global.__prompt_responses__.shift(),
-});
-
-function _stubPromptResponse_(response) {
-  global.__prompt_responses__.push(response);
-}
-
-function _shiftPromptMessages_() {
-  return global.__prompt_messages__.shift();
-}
-
-it("Si ingresamos chocolate, frutilla y tramontana, muestra Aquí tiene su helado de chocolate, frutilla y tramontana", function() {
+it("si ingresamos americana, chocolate y frutilla, muestra Aquí tiene su helado de americana, chocolate y frutilla", function() {
   
+  _stubPromptResponse_('americana');
   _stubPromptResponse_('chocolate');
   _stubPromptResponse_('frutilla');
-  _stubPromptResponse_('tramontana');
   
 
-  _dispatch_('load', window)
+  _resetDocument_();
+
+"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el primer gusto de helado');
+"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el segundo gusto de helado');  
+"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el tercer gusto de helado');  
+
   
-
-"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el primer gusto');
-"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el segundo gusto');  
-"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el tercer gusto');  
-
-'Aquí tiene su helado de chocolate, frutilla y tramontana'.should.eql(_last_alert_message_)
+  'Aquí tiene su helado de americana, chocolate y frutilla'.should.eql(_shiftAlertMessage_())
 
 });
 
-it("Si ingresamos americana, banana split y mascarpone, muestra Aquí tiene su helado de americana, banana split y mascarpone", function() {
+it("si ingresamos tramontana, dulce de leche y pistacho, muestra Aquí tiene su helado de tramontana, dulce de leche y pistacho", function() {
+  
+  _stubPromptResponse_('tramontana');
+  _stubPromptResponse_('dulce de leche');
+  _stubPromptResponse_('pistacho');
+  
 
-_stubPromptResponse_('americana');
-_stubPromptResponse_('banana split');
-_stubPromptResponse_('mascarpone');
-
-
-_dispatch_('load', window)
-
-"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el primer gusto');
-"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el segundo gusto');  
-"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessages_(), 'Debería pedir por el tercer gusto');  
-
-'Aquí tiene su helado de americana, banana split y mascarpone'.should.eql(_last_alert_message_)
+  _resetDocument_();
 
 
-});/*#tests>*/
+"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el primer gusto de helado');
+"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el segundo gusto de helado');  
+"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el tercer gusto de helado');  
+
+  
+  'Aquí tiene su helado de tramontana, dulce de leche y pistacho'.should.eql(_shiftAlertMessage_())
+
+});
+/*#tests>*/
