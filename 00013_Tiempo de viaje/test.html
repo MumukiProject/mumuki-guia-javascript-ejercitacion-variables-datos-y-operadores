@@ -1,2 +1,29 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 10 muestra `Para la distancia 10 km en bicicleta el tiempo de viaje es: 1 hora/s, a pie es: 2 horas/s y en auto es 0.2 hora/s` ", function() {
+
+_stubPromptResponse_(100);
+
+_resetDocument_();
+
+"Ingrese la distancia de su recorrido".should.eql(_shiftPromptMessage_(), 'Debería pedir una distancia');
+
+'Para la distancia 10 km en bicicleta el tiempo de viaje es: 1 hora/s, a pie es: 2 horas/s y en auto es 0.2 hora/s'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 50 muestra `Para la distancia 50 km en bicicleta el tiempo de viaje es: 5 hora/s, a pie es: 10 horas/s y en auto es 1 hora/s`", function() {
+
+_stubPromptResponse_(50);
+
+
+_resetDocument_();
+
+"Ingrese la distancia de su recorrido".should.eql(_shiftPromptMessage_(), 'Debería pedir una distancia');
+
+'Para la distancia 50 km en bicicleta el tiempo de viaje es: 5 hora/s, a pie es: 10 horas/s y en auto es 1 hora/s'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
