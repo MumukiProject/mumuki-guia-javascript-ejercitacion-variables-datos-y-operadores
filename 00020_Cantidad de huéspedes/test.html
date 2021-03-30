@@ -3,30 +3,36 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 5, 5, 3, muestra El texto Ada Lovelace tiene 12 cantidad de caracteres", function() {
+it("si ingresamos 5, 5, 3, muestra El hotel tiene una capacidad de 37 personas", function() {
 
-_stubPromptResponse_('Ada Lovelace')
-_stubPromptResponse_('Ada Lovelace')
-_stubPromptResponse_('Ada Lovelace')
+_stubPromptResponse_(5)
+_stubPromptResponse_(5)
+_stubPromptResponse_(3)
 
 
 _resetDocument_();
 
-"Ingrese un texto por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un texto');
+"`Ingresá cuantas habitaciones para dos personas tiene el hotel`".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"`Ingresá cuantas habitaciones para tres personas tiene el hotel`".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"`Ingresá cuantas habitaciones para cuatro personas tiene el hotel`".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
 
-'El texto Ada Lovelace tiene 12 cantidad de caracteres'.should.eql(_shiftAlertMessage_())
+'El hotel tiene una capacidad de 37 personas'.should.eql(_shiftAlertMessage_())
 
 });
 
-it("si ingresamos Alfonsina Storni, muestra El texto Alfonsina Storni tiene 16 cantidad de caracteres", function() {
+it("si ingresamos 15, 20, 12, muestra El hotel tiene una capacidad de 138 personas", function() {
 
-_stubPromptResponse_('Alfonsina Storni')
+_stubPromptResponse_(5)
+_stubPromptResponse_(5)
+_stubPromptResponse_(3)
 
 
 _resetDocument_();
 
-"Ingrese un texto por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un texto');
+"`Ingresá cuantas habitaciones para dos personas tiene el hotel`".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"`Ingresá cuantas habitaciones para tres personas tiene el hotel`".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"`Ingresá cuantas habitaciones para cuatro personas tiene el hotel`".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
 
-'Alfonsina Storni tiene 16 cantidad de caracteres'.should.eql(_shiftAlertMessage_())
+'El hotel tiene una capacidad de 138 personas'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
