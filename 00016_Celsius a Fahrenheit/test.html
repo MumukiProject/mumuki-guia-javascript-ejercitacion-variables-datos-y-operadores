@@ -1,2 +1,30 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 1, muestra La conversión de 1 grados Celsius a Fahrenheit es: 33.8", function() {
+
+_stubPromptResponse_(1);
+
+
+_resetDocument_();
+
+"Ingrese una cantidad de grados Celsius".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
+
+'La conversión de 1 grados Celsius a Fahrenheit es: 33.8'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 4, muestra La conversión de 4 grados Celsius a Fahrenheit es: 39.2", function() {
+
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+"Ingrese una cantidad de grados Celsius".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
+
+'La conversión de 4 grados Celsius a Fahrenheit es: 39.2'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
