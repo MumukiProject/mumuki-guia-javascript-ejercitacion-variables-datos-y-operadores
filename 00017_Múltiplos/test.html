@@ -1,2 +1,34 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 20 y 5, muestra El número 20 es múltiplo de 5: true", function() {
+
+_stubPromptResponse_(20)
+stubPromptResponse_(20)
+
+
+_resetDocument_();
+
+"Ingrese el primer número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"Ingrese el segundo número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+
+'El número 20 es múltiplo de 5: true'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 21 y 5, muestra El número 20 es múltiplo de 5: false", function() {
+
+_stubPromptResponse_(21);
+_stubPromptResponse_(5);
+
+
+_resetDocument_();
+
+"Ingrese el primer número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"Ingrese el segundo número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+
+'El número 21 es múltiplo de 5: false'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
