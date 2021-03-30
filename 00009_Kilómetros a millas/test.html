@@ -3,7 +3,7 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 2, muestra El resultado de la conversión de 2 kilometros a millas es: 1.24274", function() {
+it("si ingresamos 2, muestra El resultado de la conversión de 2 kilometros a millas es: 1.2427", function() {
 
 _stubPromptResponse_(2);
 
@@ -12,11 +12,11 @@ _resetDocument_();
 
 "Ingrese una cantidad de kilómetros".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de kilómetros');
 
-'El resultado de la conversión de 2 kilometros a millas es: 1.24274'.should.eql(_shiftAlertMessage_())
+'El resultado de la conversión de 2 kilometros a millas es: 1.2427'.should.eql(_shiftAlertMessage_())
 
 });
 
-it("si ingresamos 4, muestra El resultado de la conversión de 4 kilometros a millas es: 2.48548", function() {
+it("si ingresamos 4, muestra El resultado de la conversión de 4 kilometros a millas es: 2.4854", function() {
 
 _stubPromptResponse_(4);
 
@@ -25,6 +25,6 @@ _resetDocument_();
 
 "Ingrese una cantidad de kilómetros".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de kilómetros');
 
-'El resultado de la conversión de 4 kilometros a millas es: 2.48548'.should.eql(_shiftAlertMessage_())
+'El resultado de la conversión de 4 kilometros a millas es: 2.4854'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
