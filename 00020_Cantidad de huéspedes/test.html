@@ -1,2 +1,32 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 5, 5, 3, muestra El texto Ada Lovelace tiene 12 cantidad de caracteres", function() {
+
+_stubPromptResponse_('Ada Lovelace')
+_stubPromptResponse_('Ada Lovelace')
+_stubPromptResponse_('Ada Lovelace')
+
+
+_resetDocument_();
+
+"Ingrese un texto por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un texto');
+
+'El texto Ada Lovelace tiene 12 cantidad de caracteres'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos Alfonsina Storni, muestra El texto Alfonsina Storni tiene 16 cantidad de caracteres", function() {
+
+_stubPromptResponse_('Alfonsina Storni')
+
+
+_resetDocument_();
+
+"Ingrese un texto por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un texto');
+
+'Alfonsina Storni tiene 16 cantidad de caracteres'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
