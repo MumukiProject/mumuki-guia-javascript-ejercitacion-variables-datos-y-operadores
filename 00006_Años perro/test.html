@@ -1,2 +1,30 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 1, muestra El equivalente de 1 en años perros es: 7", function() {
+
+_stubPromptResponse_(1);
+
+
+_resetDocument_();
+
+"Ingrese una edad por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
+
+'El equivalente de 1 en años perros es: 7'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 4, muestra El equivalente de 4 en años perros es: 28", function() {
+
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+"Ingrese una edad por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
+
+'El equivalente de 4 en años perros es: 28'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
