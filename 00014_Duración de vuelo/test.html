@@ -5,12 +5,12 @@ _resetUserInteractions_();
 
 it("si ingresamos Tulum 14, Turquía 20 y Egipto 4 muestra `La duración total del vuelo con escala en Tulum de duración 14 hs, Turquía de duración 20 hs y Egipto de duración 4 hs es: 38 hs` ", function() {
 
-_stubPromptResponse_('¿Cúal es la primer escala?');
-_stubPromptResponse_('¿Cúal es la duración de la primer escala?');
-_stubPromptResponse_('¿Cúal es la segunda escala?');
-_stubPromptResponse_('¿Cúal es la duración de la segunda escala?');
-_stubPromptResponse_('¿Cúal es la tercer escala?');
-_stubPromptResponse_('¿Cúal es la duración de la tercer escala?');
+_stubPromptResponse_('Tulum');
+_stubPromptResponse_(14);
+_stubPromptResponse_('Turquía');
+_stubPromptResponse_(20);
+_stubPromptResponse_('Egipto');
+_stubPromptResponse_(4);
 
 _resetDocument_();
 
