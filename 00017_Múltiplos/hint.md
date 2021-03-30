@@ -1,1 +1,1 @@
- Te puede ser útil el operador módulo o también llamado resto  % para resolverlo.
+Te puede ser útil el operador módulo o también llamado resto  `%` para resolverlo.
