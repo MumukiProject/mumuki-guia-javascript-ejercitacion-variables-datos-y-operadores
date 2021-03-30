@@ -3,21 +3,21 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 2 y 4 muestra El resultado del área del triángulo con base 2 y altura 4 es: 4", function() {
+it("si ingresamos 4 y  muestra El resultado del área del rectángulo con base 4 y altura 2 es: 8", function() {
 
-_stubPromptResponse_(2);
 _stubPromptResponse_(4);
+_stubPromptResponse_(2);
 
 _resetDocument_();
 
-"Ingrese el valor de la base del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del tríangulo');
-"Ingrese el valor de la altura del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del tríangulo');
+"Ingrese el valor de la base del rectángulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del rectángulo');
+"Ingrese el valor de la altura del rectángulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del rectángulo');
 
-'El resultado del área del triángulo con base 2 y altura 4 es: 4'.should.eql(_shiftAlertMessage_())
+'El resultado del área del rectángulo con base 4 y altura 2 es: 8'.should.eql(_shiftAlertMessage_())
 
 });
 
-it("si ingresamos 8 y 4 muestra El resultado del área del triángulo con base 8 y altura 4 es: 16", function() {
+it("si ingresamos 8 y 4 muestra El resultado del área del rectángulo con base 8 y altura 4 es: 32", function() {
 
 _stubPromptResponse_(8);
 _stubPromptResponse_(4);
@@ -25,9 +25,9 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"Ingrese el valor de la base del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del tríangulo');
-"Ingrese el valor de la altura del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del tríangulo');
+"Ingrese el valor de la base del rectángulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del rectángulo');
+"Ingrese el valor de la altura del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del rectángulo');
 
-'El resultado del área del triángulo con base 8 y altura 4 es: 16'.should.eql(_shiftAlertMessage_())
+'El resultado del área del rectángulo con base 8 y altura 4 es: 32'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
