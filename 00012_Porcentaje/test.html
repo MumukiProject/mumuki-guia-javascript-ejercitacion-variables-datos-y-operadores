@@ -13,7 +13,7 @@ _resetDocument_();
 "Ingrese un número por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
 "Ingrese un porcentaje".should.eql(_shiftPromptMessage_(), 'Debería pedir por un porcentaje');
 
-'El porcentaje 10 del número 10 es: 10'.should.eql(_shiftAlertMessage_())
+'El porcentaje 10 del número 100 es: 10'.should.eql(_shiftAlertMessage_())
 
 });
 
@@ -28,6 +28,6 @@ _resetDocument_();
 "Ingrese un número por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
 "Ingrese un porcentaje".should.eql(_shiftPromptMessage_(), 'Debería pedir por un porcentaje');
 
-'El porcentaje 88 del número 4 es: 3.52'.should.eql(_shiftAlertMessage_())
+'El porcentaje 4 del número 88 es: 3.52'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
