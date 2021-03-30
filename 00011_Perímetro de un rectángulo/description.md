@@ -1,1 +1,1 @@
-Crear un programa que pida al usuario ingresar el valor de la altura y el valor del ancho de un rectángulo, calcular su perímetro y mostrarlo en un mensaje.
+> Crea un programa que pida ingresar el valor de la altura y el valor de la base de un rectángulo, calcular su perímetro y mostrarlo con el siguiente mensaje: : `El resultado del perímetro del rectángulo con base {base} y altura {altura} es: `.

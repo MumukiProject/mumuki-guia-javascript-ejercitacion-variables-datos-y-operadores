@@ -1,1 +1,1 @@
-Crear un programa que pida ingresar una edad y devuelva el equivalente de esas edad en años perro.
+> Crea un programa que pida ingresar una edad y devuelva el equivalente de esas edad en años perro mediante el siguiente mensaje `El equivalente de {edad} en años perros es: `

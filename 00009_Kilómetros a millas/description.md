@@ -1,1 +1,1 @@
-Crear un programa que pida ingresar una cantidad de kilómetros y muestre un mensaje con el resultado de la conversión en millas.
+> Crea un programa que pida ingresar una cantidad de kilómetros y el resultado de la conversión en millas con el siguiente mensaje: `El resultado de la conversión de {kilometros} kilometros a millas es: `

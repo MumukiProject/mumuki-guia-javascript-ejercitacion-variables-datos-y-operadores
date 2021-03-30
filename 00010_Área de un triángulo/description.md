@@ -1,1 +1,1 @@
-Crear un programa que pida al usuario ingresar el valor de la base y el valor de la altura de un triangulo, calcular su área y mostrarlo en un mensaje.
+> Crea un programa que pida ingresar el valor de la base y el valor de la altura de un triángulo, calcular su área y mostrarlo con el siguiente mensaje: `El resultado del área del triángulo con base {base} y altura {altura} es: `.

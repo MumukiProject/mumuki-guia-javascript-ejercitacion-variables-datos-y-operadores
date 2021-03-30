@@ -1,1 +1,1 @@
-Crear un programa que pida ingresar una cantidad en minutos mediante un y muestre un mensaje con el resultado de la conversión en segundos.
+> Crea un programa que pida ingresar una cantidad en minutos mediante un prompt y muestre el resultado de la conversión en segundos con el siguiente mensaje: `El resultado de la conversión de {minutos} minutos a segundos es: `
