@@ -1,2 +1,44 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos Ada, Alfonsina y el mar, Alma de diamante, Creo muestra Se ha creado la playlist Ada con las canciones Alfonsina y el mar, Alma de diamante, Creo", function() {
+  
+  _stubPromptResponse_('Ada');
+  _stubPromptResponse_('Alfonsina y el mar');
+  _stubPromptResponse_('Alma de diamante');
+  _stubPromptResponse_('Creo');
+  
+
+  _resetDocument_();
+
+"¿Cuál es el nombre de la playlist?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la playlist');
+"¿Cuál es la primer canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la primer canción');  
+"¿Cuál es la segunda canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la segunda canción');  
+"¿Cuál es la tercer canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la tercer canción');  
+  
+  
+  'Se ha creado la playlist Ada con las canciones Alfonsina y el mar, Alma de diamante, Creo'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos International, Elephant, Shine on you crazy diamond, No surprises muestra Se ha creado la playlist International con las canciones Elephant, Shine on you crazy diamond, No surprises", function() {
+  
+  _stubPromptResponse_('International');
+  _stubPromptResponse_('Elephant');
+  _stubPromptResponse_('Shine on you crazy diamond');
+  _stubPromptResponse_('No surprises');
+  
+
+  _resetDocument_();
+
+"¿Cuál es el nombre de la playlist?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la playlist');
+"¿Cuál es la primer canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la primer canción');  
+"¿Cuál es la segunda canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la segunda canción');  
+"¿Cuál es la tercer canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la tercer canción');  
+  
+  
+'Se ha creado la playlist International con las canciones Elephant, Shine on you crazy diamond, No surprises'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/

@@ -1,1 +1,7 @@
-Crear un programa que pida al usuario ingresar un texto y muestre un mensaje con la cantidad de caracteres que tiene ese texto. INVESTIGAR CÓMO HACERLO
+> Crea un programa que pida ingresar un texto mediante un prompt con el siguiente mensaje `Ingrese un texto por favor` y muestre la cantidad de caracteres que tiene ese texto con el siguiente mensaje: `El texto {texto} tiene {resultado} cantidad de caracteres`. INVESTIGAR CÓMO HACERLO
+
+<style>
+  .mu-browser {
+    display: none;
+  }
+</style>

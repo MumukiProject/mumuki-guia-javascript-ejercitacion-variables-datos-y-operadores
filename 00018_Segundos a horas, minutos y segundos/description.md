@@ -1,1 +1,7 @@
-Crear un programa que pida ingresar una cantidad en segundos y muestre un mensaje con el resultado de la conversión en horas, minutos y segundos que corresponde a esa cantidad (p.ej. 3602 segundos = 1 hora 2 segundos). (Usar operador módulo)
+> Crea un programa que pida ingresar una cantidad en segundos mediante el siguiente mensaje: `Ingrese una cantidad de segundos` y muestre el resultado de la conversión en horas, minutos y segundos que corresponde a esa cantidad mediante el siguiente mensaje: `{segundos} segundos = {horas} horas, {minutos} minutos y {segundos} segundos` (Usar operador módulo)
+
+<style>
+  .mu-browser {
+    display: none;
+  }
+</style>

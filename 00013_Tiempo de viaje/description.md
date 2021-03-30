@@ -1,1 +1,7 @@
-> Crea un programa que pida al usuario la distancia de su recorrido calcular cuánto tiempo tardaría en completar el recorrido en distintos medios de transporte, definiendo de antemano distintas velocidades para distintos medios de transporte (p. ej.: a pie: 5 km/hora, bici 10km/hora, etc.) y luego mostrarlo con el siguiente mensaje: : `Para la distancia {distancia} el tiempo de viaje es: `.
+> Crea un programa que pida al usuario la distancia de su recorrido mediante el siguiente mensaje `Ingrese la distancia de su recorrido` y calcular cuánto tiempo tardaría en completar el recorrido en distintos medios de transporte, definiendo de antemano distintas velocidades para distintos medios de transporte (p. ej.: a pie: 5 km/hora, bici 10km/hora, etc.) y luego mostrarlo con el siguiente mensaje: : `Para la distancia {distancia} el tiempo de viaje es: {resultado}`.
+
+<style>
+  .mu-browser {
+    display: none;
+  }
+</style>
