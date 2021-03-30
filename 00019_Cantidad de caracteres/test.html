@@ -3,28 +3,28 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 'Ada Lovelace', muestra 8500 segundos son = 2 horas, 21 minutos y 40 segundos", function() {
+it("si ingresamos 'Ada Lovelace', muestra El texto Ada Lovelace tiene 12 cantidad de caracteres", function() {
 
-_stubPromptResponse_(8500)
+_stubPromptResponse_('Ada Lovelace')
 
 
 _resetDocument_();
 
-"Ingrese una cantidad de segundos".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
+"Ingrese un texto por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un texto');
 
-'8500 segundos son = 2 horas, 21 minutos y 40 segundos'.should.eql(_shiftAlertMessage_())
+'El texto Ada Lovelace tiene 12 cantidad de caracteres'.should.eql(_shiftAlertMessage_())
 
 });
 
-it("si ingresamos 19248, muestra 19248 segundos son = 5 horas, 20 minutos y 48 segundos", function() {
+it("si ingresamos Alfonsina Storni, muestra El texto Alfonsina Storni tiene 16 cantidad de caracteres", function() {
 
-_stubPromptResponse_(19248)
+_stubPromptResponse_('Alfonsina Storni')
 
 
 _resetDocument_();
 
-"Ingrese una cantidad de segundos".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
+"Ingrese un texto por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un texto');
 
-'19248 segundos son = 5 horas, 20 minutos y 48 segundos'.should.eql(_shiftAlertMessage_())
+'Alfonsina Storni tiene 16 cantidad de caracteres'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
