@@ -1,2 +1,33 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 100 y 10 muestra `El porcentaje 10 del número 10 es: 10` ", function() {
+
+_stubPromptResponse_(100);
+_stubPromptResponse_(10);
+
+_resetDocument_();
+
+"Ingrese un número por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"Ingrese un porcentaje".should.eql(_shiftPromptMessage_(), 'Debería pedir por un porcentaje');
+
+'El porcentaje 10 del número 10 es: 10'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 88 y 4 muestra `El porcentaje 4 del número 88 es: 3.52`", function() {
+
+_stubPromptResponse_(88);
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+"Ingrese un número por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+"Ingrese un porcentaje".should.eql(_shiftPromptMessage_(), 'Debería pedir por un porcentaje');
+
+'El porcentaje 88 del número 4 es: 3.52'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
