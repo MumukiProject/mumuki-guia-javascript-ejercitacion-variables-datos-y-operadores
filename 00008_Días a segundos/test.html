@@ -1,2 +1,30 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos 2, muestra El resultado de la conversión de 2 días a segundos es: 172800", function() {
+
+_stubPromptResponse_(2);
+
+
+_resetDocument_();
+
+"Ingrese una cantidad de días por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de días');
+
+'El resultado de la conversión de 2 días a segundos es: 172800'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 4, muestra El resultado de la conversión de 4 días a segundos es: 345600", function() {
+
+_stubPromptResponse_(4);
+
+
+_resetDocument_();
+
+"Ingrese una cantidad de días por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de días');
+
+'El resultado de la conversión de 4 días a segundos es: 345600'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
