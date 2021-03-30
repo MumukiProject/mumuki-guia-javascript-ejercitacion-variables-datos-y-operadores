@@ -1,2 +1,39 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+_resetUserInteractions_();
+})
+
+it("si ingresamos Tulum 14, Turquía 20 y Egipto 4 muestra `La duración total del vuelo con escala en Tulum de duración 14 hs, Turquía de duración 20 hs y Egipto de duración 4 hs es: 38 hs` ", function() {
+
+_stubPromptResponse_('¿Cúal es la primer escala?');
+_stubPromptResponse_('¿Cúal es la duración de la primer escala?');
+_stubPromptResponse_('¿Cúal es la segunda escala?');
+_stubPromptResponse_('¿Cúal es la duración de la segunda escala?');
+_stubPromptResponse_('¿Cúal es la tercer escala?');
+_stubPromptResponse_('¿Cúal es la duración de la tercer escala?');
+
+_resetDocument_();
+
+"¿Cúal es la primer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir por una escala');
+"¿Cúal es la duración de la primer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir la duración de la primer escala');
+"¿Cúal es la segunda escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir por una escala');
+"¿Cúal es la duración de la segunda escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir la duración de la segunda escala');
+"¿Cúal es la tercer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir por una escala');
+"¿Cúal es la duración de la tercer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir la duración de la tercer escala');
+
+'La duración total del vuelo con escala en Tulum de duración 14 hs, Turquía de duración 20 hs y Egipto de duración 4 hs es: 38 hs'.should.eql(_shiftAlertMessage_())
+
+});
+
+/*it("si ingresamos 50 muestra `Para la distancia 50 km en bicicleta el tiempo de viaje es 5 hora/s, a pie 10 hora/s y en auto 1 hora/s`", function() {
+
+_stubPromptResponse_(50);
+
+
+_resetDocument_();
+
+"Ingrese la distancia de su recorrido".should.eql(_shiftPromptMessage_(), 'Debería pedir una distancia');
+
+'Para la distancia 50 km en bicicleta el tiempo de viaje es 5 hora/s, a pie 10 hora/s y en auto 1 hora/s'.should.eql(_shiftAlertMessage_())
+
+});*//*#tests>*/
