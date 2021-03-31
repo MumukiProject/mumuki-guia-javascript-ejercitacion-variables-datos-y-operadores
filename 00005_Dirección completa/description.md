@@ -1,5 +1,15 @@
- > Crea un programa que permita ingresar por separado, la calle, el número, el departamento, el código postal, la ciudad y el país, mediante un prompt para cada uno con la siguiente frase: `¿Cuál es la calle?`, `¿Cuál es el número?`, `¿Cuál es el departamento?`, `¿Cuál es el código postal?`, `¿Cúal es la ciudad?` y `¿Cúal es el país?`, y luego muestre un mensaje que diga,
-`"La dirección que ha ingresado es: {calle} {numero} {departamento}, {codigoPostal}, {ciudad}, {pais}"`
+Necesitamos un programa que pida ingresar los siguientes datos de una dirección: calle, número, departamento, código postal, ciudad y país, mediante los siguiente mensajes respectivamente:
+
+1. `¿Cuál es la calle?`. 
+1. `¿Cuál es el número?`.
+1. `¿Cuál es el departamento?`
+1. `¿Cuál es el código postal?`
+1. `¿Cúal es la ciudad?`
+1. `¿Cúal es el país?`
+
+Con está información el programa deberá mostrar el siguiente mensaje: `La dirección que ha ingresado es: {calle} {numero} {departamento}, {codigoPostal}, {ciudad}, {pais}`
+
+> Creá el programa que acabamos de describir 
 
 <style>
   .mu-browser {
