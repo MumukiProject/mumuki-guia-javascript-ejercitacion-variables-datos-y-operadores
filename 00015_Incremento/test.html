@@ -24,7 +24,7 @@ it("si ingresamos 5 y 5, muestra 10, 15, 20, 25, 30", function() {
 });
 
 
-it("si ingresamos 2 y 3, muestra 5, 8, 13, 16, 19", function() {
+it("si ingresamos 2 y 3, muestra 5, 8, 11, 14, 17", function() {
   
   _stubPromptResponse_(2);
   _stubPromptResponse_(3);
@@ -38,8 +38,8 @@ it("si ingresamos 2 y 3, muestra 5, 8, 13, 16, 19", function() {
   
   '5'.should.eql(_shiftAlertMessage_())
   '8'.should.eql(_shiftAlertMessage_())
-  '13'.should.eql(_shiftAlertMessage_())
-  '16'.should.eql(_shiftAlertMessage_())
-  '19'.should.eql(_shiftAlertMessage_())
+  '11'.should.eql(_shiftAlertMessage_())
+  '14'.should.eql(_shiftAlertMessage_())
+  '17'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
