@@ -1,6 +1,16 @@
-> Creá un programa que permita ingresar por separado, nombre, apellido, edad, nacionalidad y número de documento, mediante un prompt para cada uno con la siguiente frase: `¿Cuál es tu nombre?`, `¿Cuál es tu apellido?`, `¿Cuál es tu edad?`, `¿Cuál es tu nacionalidad?` y `¿Cuál es tu número de documento?` respectivamente, y luego muestre un mensaje que diga, `El nuevo perfil fue ingresado al sistema: nombre: {nombre}, apellido: {apellido}, edad: {edad}, nacionalidad: {nacionalidad}, número de documento: {dni}` y liste todos los datos juntos.
+Necesitamos un programa que permita ingresar nombre, apellido, edad, nacionalidad y número de documento con los siguientes mensajes respectivamente:
 
+ 1. `¿Cuál es tu nombre?`. 
+ 1. `¿Cuál es tu apellido?`. 
+ 1. `¿Cuál es tu apellido?`.
+ 1. `¿Cuál es tu edad?`
+ 1. `¿Cuál es tu nacionalidad?`
+ 1. `¿Cuál es tu número de documento?`
+ 
+Con esta información, el programa deberá mostrar el siguiente mensaje: 
+`El nuevo perfil fue ingresado al sistema: nombre: {nombre}, apellido: {apellido}, edad: {edad}, nacionalidad: {nacionalidad}, número de documento: {dni}`
 
+> Creá el programa que acabamos de describir.
 <style>
   .mu-browser {
     display: none;
