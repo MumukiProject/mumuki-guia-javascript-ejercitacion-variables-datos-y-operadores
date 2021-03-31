@@ -1,2 +1,58 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos 3000, luz, 400, internet, 600, agua y 100, muestra Los servicios a pagar son luz de $ 400, internet de $ 600, agua de $100, queda disponible un saldo de 1900 ", function() {
+  
+  _stubPromptResponse_(3000);
+  _stubPromptResponse_('luz');
+  _stubPromptResponse_('400');
+  _stubPromptResponse_('internet');
+  _stubPromptResponse_('600');
+  _stubPromptResponse_('agua');
+  _stubPromptResponse_('100');
+
+  
+
+  _resetDocument_();
+
+  "¿Cuál es tu monto disponible?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto');
+  "¿Cuál es el nombre primer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el primer servicio');  
+  "¿Cuál es el monto del primer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto del primer servicio');
+  "¿Cuál es el nombre segundo servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el segundo servicio');  
+  "¿Cuál es el monto del segundo servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto del segundo servicio');
+  "¿Cuál es el nombre tercer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el tercer servicio');  
+  "¿Cuál es el monto del tercer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto del tercer servicio');
+  
+  
+  'Los servicios a pagar son luz de $ 400, internet de $ 600, agua de $ 100, queda disponible un saldo de 1900'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos 1500, luz, 300, internet, 600, gas y 200, muestra Los servicios a pagar son luz de $ 300, internet de $ 600, gas de $ 200, queda disponible un saldo de 1900 ", function() {
+  
+  _stubPromptResponse_(1500);
+  _stubPromptResponse_('luz');
+  _stubPromptResponse_(300);
+  _stubPromptResponse_('internet');
+  _stubPromptResponse_(600);
+  _stubPromptResponse_('gas');
+  _stubPromptResponse_(200);
+
+  
+
+  _resetDocument_();
+
+  "¿Cuál es tu monto disponible?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto');
+  "¿Cuál es el nombre primer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el primer servicio');  
+  "¿Cuál es el monto del primer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto del primer servicio');
+  "¿Cuál es el nombre segundo servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el segundo servicio');  
+  "¿Cuál es el monto del segundo servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto del segundo servicio');
+  "¿Cuál es el nombre tercer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el tercer servicio');  
+  "¿Cuál es el monto del tercer servicio?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el monto del tercer servicio');
+  
+  
+  'Los servicios a pagar son luz de $ 300, internet de $ 600, gas de $200, queda disponible un saldo de $ 400'.should.eql(_shiftAlertMessage_())
+
+});/*#tests>*/
