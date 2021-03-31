@@ -3,34 +3,46 @@
   _resetUserInteractions_();
 })
 
-it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
+it("si ingresamos Feli, Perez, 28, argentina y 11110000 muestra El nuevo perfil fue ingresado al sistema: nombre: Feli, apellido: Perez, edad: 28, nacionalidad: argentina, número de documento: 11110000", function() {
   
   _stubPromptResponse_('Feli');
   _stubPromptResponse_('Perez');
-  
+  _stubPromptResponse_(28)
+  _stubPromptResponse_('argentina')
+  _stubPromptResponse_(11110000)
 
   _resetDocument_();
 
   "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
-  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
+  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');
+  "¿Cuál es tu edad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
+  "¿Cuál es tu nacionalidad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la nacionalidad');
+  "¿Cuál es tu número de documento?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el número de documento');
   
   
-  'Hola Feli Perez, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
+  
+  'El nuevo perfil fue ingresado al sistema: nombre: Feli, apellido: Perez, edad: 28, nacionalidad: argentina, número de documento: 11110000'.should.eql(_shiftAlertMessage_())
 
 });
 
-it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
+it("si ingresamos Ada, Lovelace, 168, inglesa y 000111 muestra El nuevo perfil fue ingresado al sistema: nombre: Ada, apellido: Lovelace, edad: 168, nacionalidad: inglesa, número de documento: 000111", function() {
   
   _stubPromptResponse_('Ada');
   _stubPromptResponse_('Lovelace');
-  
+  _stubPromptResponse_(168)
+  _stubPromptResponse_('inglesa')
+  _stubPromptResponse_(000111)
 
   _resetDocument_();
 
   "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
-  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
+  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');
+  "¿Cuál es tu edad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
+  "¿Cuál es tu nacionalidad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la nacionalidad');
+  "¿Cuál es tu número de documento?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el número de documento');
   
-  'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
-
+  
+  
+  'El nuevo perfil fue ingresado al sistema: nombre: Ada, apellido: Lovelace, edad: 168, nacionalidad: inglesa, número de documento: 000111'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
