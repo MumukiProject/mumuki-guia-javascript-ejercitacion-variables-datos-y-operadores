@@ -3,23 +3,27 @@
   _resetUserInteractions_();
 })
 
-it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
+it("si ingresamos 5 y 5, muestra 10, 15, 20, 25, 30", function() {
   
-  _stubPromptResponse_('Feli');
-  _stubPromptResponse_('Perez');
+  _stubPromptResponse_(5);
+  _stubPromptResponse_(5);
   
 
   _resetDocument_();
 
-  "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
-  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
+  "Ingrese un número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
+  "Ingrese una cantidad".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');  
   
   
-  'Hola Feli Perez, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
+  '10'.should.eql(_shiftAlertMessage_())
+  '15'.should.eql(_shiftAlertMessage_())
+  '20'.should.eql(_shiftAlertMessage_())
+  '25'.should.eql(_shiftAlertMessage_())
+  '30'.should.eql(_shiftAlertMessage_())
 
 });
 
-it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
+/*it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
   
   _stubPromptResponse_('Ada');
   _stubPromptResponse_('Lovelace');
@@ -33,4 +37,4 @@ it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
   'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
 
 
-});/*#tests>*/
+});*//*#tests>*/
