@@ -1,7 +1,7 @@
 Nos pidieron un programa que permita ingresar el nombre de una playlist y el título de tres canciones, mediante los siguiente mensajes:
 
-1. `¿Cuál es el nombre de la playlist?`. 
-1. `¿Cuál es la primer canción?`.
+1. `¿Cuál es el nombre de la playlist?`
+1. `¿Cuál es la primer canción?`
 1. `¿Cuál es la segunda canción?`
 1. `¿Cuál es la tercer canción?`
 
