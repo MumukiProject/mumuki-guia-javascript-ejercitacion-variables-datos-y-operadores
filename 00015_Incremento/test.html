@@ -1,2 +1,36 @@
 /*<output#*//*#output>*/
-/*<tests#*//*#tests>*/
+/*<tests#*/beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+it("si ingresamos Feli y Perez, muestra Hola Feli Perez", function() {
+  
+  _stubPromptResponse_('Feli');
+  _stubPromptResponse_('Perez');
+  
+
+  _resetDocument_();
+
+  "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
+  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
+  
+  
+  'Hola Feli Perez, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
+
+});
+
+it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
+  
+  _stubPromptResponse_('Ada');
+  _stubPromptResponse_('Lovelace');
+  
+
+  _resetDocument_();
+
+  "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
+  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');  
+  
+  'Hola Ada Lovelace, bienvenida a Ada'.should.eql(_shiftAlertMessage_())
+
+
+});/*#tests>*/
