@@ -1,4 +1,12 @@
-> Crea un programa que pida ingresar una cantidad de días con el siguiente mensaje: `Ingrese una cantidad de días por favor` y muestre el resultado de la conversión en segundos con el siguiente mensaje: `El resultado de la conversión de {dias} días a segundos es: {resultado}`
+Necesitamos un programa que pida una cantidad días con el siguiente mensaje:
+
+ * `Ingresá una cantidad de días por favor`
+ 
+
+El programa deberá mostrar el resultado de la conversión de días a segundos mediante el siguiente mensaje:
+`El resultado de la conversión de {dias} días a segundos es: {resultado}`
+
+> Creá el programa que acabamos de describir 
 
 <style>
   .mu-browser {
