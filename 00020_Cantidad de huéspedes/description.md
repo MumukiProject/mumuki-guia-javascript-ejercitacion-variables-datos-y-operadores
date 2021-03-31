@@ -1,8 +1,12 @@
-> Crea un programa que pida ingresar, de a uno por vez, cuántas habitaciones tiene un hotel para 2, 3 y 4 personas, y muestre el máximo de huéspedes que puede albergar.
-`Ingresá cuantas habitaciones para dos personas tiene el hotel`
-`Ingresá cuantas habitaciones para tres personas tiene el hotel`
-`Ingresá cuantas habitaciones para cuatro personas tiene el hotel`
-`El hotel tiene una capacidad de {resultado} personas`
+Necesitamos un programa que pida ingresar cuántas habitaciones tiene un hotel para 2, 3 y 4 personas , con los siguientes mensajes respectivamente:
+
+* `Ingresá cuantas habitaciones para dos personas tiene el hotel`
+* `Ingresá cuantas habitaciones para tres personas tiene el hotel`
+* `Ingresá cuantas habitaciones para cuatro personas tiene el hotel`
+
+Con esta información, el programa deberá mostrar el máximo de huéspedes que puede albergar mediante el mensaje : `El hotel tiene una capacidad de {resultado} personas`
+
+> Creá el programa que acabamos de describir.
 
 <style>
   .mu-browser {
