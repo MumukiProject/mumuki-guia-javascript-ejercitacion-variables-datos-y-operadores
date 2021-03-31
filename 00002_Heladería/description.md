@@ -1,6 +1,12 @@
-> Crea un programa que permita ingresar por separado, tres gustos de helado mediante un prompt para cada uno con la siguiente frase: `¿Cuál es el primer gusto?`, `¿Cuál es el segundo gusto?` y `¿Cuál es el tercer gusto?` respectivamente, y luego muestre un mensaje que diga, `Aquí tiene su helado de {gusto1}, {gusto2} y {gusto3}`
+Necesitamos un programa para una heladería que permita ingresar tres gustos de helado con los siguientes mensajes respectivamente:
 
-> 
+ 1. `¿Cuál es el primer gusto?`. 
+ 1. `¿Cuál es el segundo gusto?`
+ 1. `¿Cuál es el tercer gusto?`.
+ 
+Con esta información, el programa deberá mostrar el siguiente mensaje: `Aquí tiene su helado de {gusto1}, {gusto2} y {gusto3}`
+
+> Creá el programa que acabamos de describir.
 
 <style>
   .mu-browser {
