@@ -1,0 +1,1 @@
+_¿y cómo se calcula el perímetro?:thinking:_ Para saberlo....tenemos que sumar el largo de cada uno de sus lados, usando la siguiente fórmula: 2 * base + 2* altura
