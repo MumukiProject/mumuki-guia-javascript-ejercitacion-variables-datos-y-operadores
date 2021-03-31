@@ -1,4 +1,11 @@
-> Crea un programa que pida ingresar una cantidad en minutos mediante un prompt con el siguiente mensaje `Ingrese una cantidad de minutos` y muestre el resultado de la conversión en segundos de la siguiente forma: `El resultado de la conversión de {minutos} minutos a segundos es: {resultado}`
+Necesitamos un programa que pida una cantidad de minutos con el siguiente mensaje:
+
+ * `Ingresá una cantidad de minutos`. 
+ 
+
+Con esta información, el programa deberá mostrar el resultado de la conversión en segundos mediante el mensaje: `El resultado de la conversión de {minutos} minutos a segundos es: {resultado}`
+
+> Creá el programa que acabamos de describir 
 
 <style>
   .mu-browser {
