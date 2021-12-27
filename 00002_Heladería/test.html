@@ -12,12 +12,10 @@ it("si ingresamos americana, chocolate y frutilla, muestra Aquí tiene su helado
 
   _resetDocument_();
 
-"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el primer gusto de helado');
-"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el segundo gusto de helado');  
-"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el tercer gusto de helado');  
-
-  
-  'Aquí tiene su helado de americana, chocolate y frutilla'.should.eql(_shiftAlertMessage_())
+   const alert = _shiftAlertMessage_();
+    alert.should.have.string('americana','Falta agregar el primer gusto al alert');
+    alert.should.have.string('chocolate','Falta agregar el segundo gusto al alert');
+    alert.should.have.string('frutilla','Falta agregar el tercer gusto al alert');
 
 });
 
@@ -31,12 +29,10 @@ it("si ingresamos tramontana, dulce de leche y pistacho, muestra Aquí tiene su 
   _resetDocument_();
 
 
-"¿Cuál es el primer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el primer gusto de helado');
-"¿Cuál es el segundo gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el segundo gusto de helado');  
-"¿Cuál es el tercer gusto?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el tercer gusto de helado');  
-
-  
-  'Aquí tiene su helado de tramontana, dulce de leche y pistacho'.should.eql(_shiftAlertMessage_())
+  const alert = _shiftAlertMessage_();
+    alert.should.have.string('tramontana','Falta agregar el primer gusto al alert');
+    alert.should.have.string('dulce de leche','Falta agregar el segundo gusto al alert');
+    alert.should.have.string('pistacho','Falta agregar el tercer gusto al alert');
 
 });
 /*#tests>*/
