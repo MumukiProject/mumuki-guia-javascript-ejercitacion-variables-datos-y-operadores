@@ -12,7 +12,7 @@ _resetDocument_();
 
    const alert = _shiftAlertMessage_();
     alert.should.have.string('1','Falta agregar el nombre al alert')
-    alert.should.have.string('7','Falta agregar el resultado al alert')
+    alert.should.have.string('7','Falta agregar el resultado al alert o el resultado es incorrecto')
 });
 
 it("si ingresamos 4, muestra El equivalente de 4 en años perros es: 28", function() {
@@ -24,6 +24,6 @@ _resetDocument_();
 
 const alert = _shiftAlertMessage_();
     alert.should.have.string('4','Falta agregar el nombre al alert')
-    alert.should.have.string('28','Falta agregar el resultado al alert')
+    alert.should.have.string('28','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });/*#tests>*/
