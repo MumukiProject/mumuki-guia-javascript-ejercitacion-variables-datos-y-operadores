@@ -10,9 +10,9 @@ _stubPromptResponse_(2);
 
 _resetDocument_();
 
-"Ingresá una cantidad de minutos".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de minutos');
-
-'El resultado de la conversión de 2 minutos a segundos es: 120'.should.eql(_shiftAlertMessage_())
+  const alert = _shiftAlertMessage_();
+    alert.should.have.string('2','Falta agregar el nombre al alert')
+    alert.should.have.string('120','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });
 
@@ -23,8 +23,8 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"Ingresá una cantidad de minutos".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de minutos');
-
-'El resultado de la conversión de 4 minutos a segundos es: 240'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar el nombre al alert')
+    alert.should.have.string('240','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });/*#tests>*/
