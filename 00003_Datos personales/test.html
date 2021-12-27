@@ -13,16 +13,12 @@ it("si ingresamos Feli, Perez, 28, argentina y 11110000 muestra El nuevo perfil 
 
   _resetDocument_();
 
-  "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
-  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');
-  "¿Cuál es tu edad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
-  "¿Cuál es tu nacionalidad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la nacionalidad');
-  "¿Cuál es tu número de documento?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el número de documento');
-  
-  
-  
-  'El nuevo perfil fue ingresado al sistema: nombre: Feli, apellido: Perez, edad: 28, nacionalidad: argentina, número de documento: 11110000'.should.eql(_shiftAlertMessage_())
-
+ const alert = _shiftAlertMessage_();
+    alert.should.have.string('Feli','Falta agregar el nombre al alert')
+    alert.should.have.string('Perez','Falta agregar el apellido al alert')
+    alert.should.have.string('28','Falta agregar la edad al alert')
+    alert.should.have.string('argentina','Falta agregar la nacionalidad al alert')
+    alert.should.have.string('11110000','Falta agregar el número de documento al alert')
 });
 
 it("si ingresamos Ada, Lovelace, 168, inglesa y 000111 muestra El nuevo perfil fue ingresado al sistema: nombre: Ada, apellido: Lovelace, edad: 168, nacionalidad: inglesa, número de documento: 000111", function() {
@@ -35,14 +31,11 @@ it("si ingresamos Ada, Lovelace, 168, inglesa y 000111 muestra El nuevo perfil f
 
   _resetDocument_();
 
-  "¿Cuál es tu nombre?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre');
-  "¿Cuál es tu apellido?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el apellido');
-  "¿Cuál es tu edad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
-  "¿Cuál es tu nacionalidad?".should.eql(_shiftPromptMessage_(), 'Debería pedir por la nacionalidad');
-  "¿Cuál es tu número de documento?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el número de documento');
-  
-  
-  
-  'El nuevo perfil fue ingresado al sistema: nombre: Ada, apellido: Lovelace, edad: 168, nacionalidad: inglesa, número de documento: 000111'.should.eql(_shiftAlertMessage_())
+   const alert = _shiftAlertMessage_();
+    alert.should.have.string('Ada','Falta agregar el nombre al alert')
+    alert.should.have.string('Lovelace','Falta agregar el apellido al alert')
+    alert.should.have.string('168','Falta agregar la edad al alert')
+    alert.should.have.string('inglesa','Falta agregar la nacionalidad al alert')
+    alert.should.have.string('000111','Falta agregar el número de documento al alert')
 
 });/*#tests>*/

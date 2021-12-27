@@ -2,7 +2,6 @@ Necesitamos un programa que permita ingresar nombre, apellido, edad, nacionalida
 
  1. `¿Cuál es tu nombre?`. 
  1. `¿Cuál es tu apellido?`. 
- 1. `¿Cuál es tu apellido?`.
  1. `¿Cuál es tu edad?`
  1. `¿Cuál es tu nacionalidad?`
  1. `¿Cuál es tu número de documento?`
