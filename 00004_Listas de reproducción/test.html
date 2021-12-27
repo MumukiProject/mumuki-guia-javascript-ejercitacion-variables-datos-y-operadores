@@ -13,14 +13,11 @@ it("si ingresamos Ada, Alfonsina y el mar, Alma de diamante, Creo muestra Se ha 
 
   _resetDocument_();
 
-"¿Cuál es el nombre de la playlist?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la playlist');
-"¿Cuál es la primera canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la primera canción');  
-"¿Cuál es la segunda canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la segunda canción');  
-"¿Cuál es la tercera canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la tercera canción');  
-  
-  
-  'Se ha creado la playlist Ada con las canciones Alfonsina y el mar, Alma de diamante, Creo'.should.eql(_shiftAlertMessage_())
-
+ const alert = _shiftAlertMessage_();
+    alert.should.have.string('Ada','Falta agregar el nombre de la playlist al alert')
+    alert.should.have.string('Alfonsina y el mar','Falta agregar la primera canción al alert')
+    alert.should.have.string('Alma de diamante','Falta agregar la segunda canción al alert')
+    alert.should.have.string('Creo','Falta agregar la tercera canción al alert')
 });
 
 it("si ingresamos International, Elephant, Shine on you crazy diamond, No surprises muestra Se ha creado la playlist International con las canciones Elephant, Shine on you crazy diamond, No surprises", function() {
@@ -32,13 +29,10 @@ it("si ingresamos International, Elephant, Shine on you crazy diamond, No surpri
   
 
   _resetDocument_();
-
-"¿Cuál es el nombre de la playlist?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la playlist');
-"¿Cuál es la primera canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la primera canción');  
-"¿Cuál es la segunda canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la segunda canción');  
-"¿Cuál es la tercera canción?".should.eql(_shiftPromptMessage_(), 'Debería pedir por el nombre de la tercera canción');  
   
-  
-'Se ha creado la playlist International con las canciones Elephant, Shine on you crazy diamond, No surprises'.should.eql(_shiftAlertMessage_())
-
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('International','Falta agregar el nombre de la playlist al alert')
+    alert.should.have.string('Elephant','Falta agregar la primera canción al alert')
+    alert.should.have.string('Shine on you crazy diamond','Falta agregar la segunda canción al alert')
+    alert.should.have.string('No surprises','Falta agregar la tercera canción al alert')
 });/*#tests>*/
