@@ -10,7 +10,8 @@
     
   
     _resetDocument_();
-    _shiftAlertMessage_().should.have.string('Feli')
+    const alert = _shiftAlertMessage_();
+    alert.should.have.string('Feli')
   
   });
   
