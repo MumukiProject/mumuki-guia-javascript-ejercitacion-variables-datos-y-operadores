@@ -11,8 +11,8 @@
   
     _resetDocument_();
  
-    _shiftAlertMessage_().should.contain.oneOf(['Feli'])
-    _shiftAlertMessage_().should.contain.oneOf(['Perez'])
+    _shiftAlertMessage_().should.string('Feli')
+    _shiftAlertMessage_().string('Perez')
   });
   
   it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
