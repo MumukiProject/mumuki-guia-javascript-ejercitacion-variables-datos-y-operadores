@@ -10,8 +10,8 @@
     
     _resetDocument_();
     const alert = _shiftAlertMessage_();
-    alert.should.have.string('Feli','Falta agregar el nombre a la respuesta')
-    alert.should.have.string('Perez','Falta agregar el apellido a la respuesta')
+    alert.should.have.string('Feli','Falta agregar el nombre al alert')
+    alert.should.have.string('Perez','Falta agregar el apellido al alert')
   });
   
   it("si ingresamos Ada y Lovelace, muestra Hola Ada Lovelace", function() {
@@ -22,8 +22,8 @@
   
     _resetDocument_();
     const alert = _shiftAlertMessage_();
-    alert.should.have.string('Ada')
-    alert.should.have.string('Lovelace')
+    alert.should.have.string('Ada','Falta agregar el nombre al alert')
+    alert.should.have.string('Lovelace','Falta agregar el apellido al alert')
   
   
   });/*#tests>*/
