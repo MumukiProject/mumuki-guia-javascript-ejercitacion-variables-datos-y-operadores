@@ -10,10 +10,9 @@ _stubPromptResponse_(1);
 
 _resetDocument_();
 
-"Ingresá una edad por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
-
-'El equivalente de 1 en años perros es: 7'.should.eql(_shiftAlertMessage_())
-
+   const alert = _shiftAlertMessage_();
+    alert.should.have.string('1','Falta agregar el nombre al alert')
+    alert.should.have.string('7','Falta agregar el resultado al alert')
 });
 
 it("si ingresamos 4, muestra El equivalente de 4 en años perros es: 28", function() {
@@ -23,8 +22,8 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"Ingresá una edad por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por la edad');
-
-'El equivalente de 4 en años perros es: 28'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar el nombre al alert')
+    alert.should.have.string('28','Falta agregar el resultado al alert')
 
 });/*#tests>*/
