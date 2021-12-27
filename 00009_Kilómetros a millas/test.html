@@ -10,9 +10,10 @@ _stubPromptResponse_(2);
 
 _resetDocument_();
 
-const alert = _shiftAlertMessage_();
-    alert.should.have.string('2','Falta agregar el kilometros al alert')
-    alert.should.have.string('1.242742','Falta agregar el resultado al alert o el resultado es incorrecto')
+"Ingresá una cantidad de kilómetros".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de kilómetros');
+
+'El resultado de la conversión de 2 kilometros a millas es: 1.242742'.should.eql(_shiftAlertMessage_())
+
 });
 
 it("si ingresamos 4, muestra El resultado de la conversión de 4 kilometros a millas es: 2.485484", function() {
@@ -22,8 +23,8 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-const alert = _shiftAlertMessage_();
-    alert.should.have.string('4','Falta agregar el kilometros al alert')
-    alert.should.have.string('2.485484','Falta agregar el resultado al alert o el resultado es incorrecto')
+"Ingresá una cantidad de kilómetros".should.eql(_shiftPromptMessage_(), 'Debería pedir por la cantidad de kilómetros');
+
+'El resultado de la conversión de 4 kilometros a millas es: 2.485484'.should.eql(_shiftAlertMessage_())
 
 });/*#tests>*/
