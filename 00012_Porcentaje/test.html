@@ -3,17 +3,17 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 100 y 10 muestra `El porcentaje 10 del número 10 es: 10` ", function() {
+it("si ingresamos 1000 y 10 muestra `El porcentaje 10 del número 1000 es: 100` ", function() {
 
-_stubPromptResponse_(100);
+_stubPromptResponse_(1000);
 _stubPromptResponse_(10);
 
 _resetDocument_();
 
-"Ingresá un número por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
-"Ingresá un porcentaje".should.eql(_shiftPromptMessage_(), 'Debería pedir por un porcentaje');
-
-'El porcentaje 10 del número 100 es: 10'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('1000','Falta agregar el número al alert')
+    alert.should.have.string('10','Falta agregar el porcentaje al alert')
+    alert.should.have.string('100','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });
 
@@ -25,9 +25,9 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"Ingresá un número por favor".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
-"Ingresá un porcentaje".should.eql(_shiftPromptMessage_(), 'Debería pedir por un porcentaje');
-
-'El porcentaje 4 del número 88 es: 3.52'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('88','Falta agregar el número al alert')
+    alert.should.have.string('4','Falta agregar el porcentaje al alert')
+    alert.should.have.string('3.52','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });/*#tests>*/
