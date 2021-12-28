@@ -10,10 +10,10 @@ _stubPromptResponse_(2);
 
 _resetDocument_();
 
-"Ingresá el valor de la base del rectángulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del rectángulo');
-"Ingresá el valor de la altura del rectángulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del rectángulo');
-
-'El resultado del perímetro del rectángulo con base 4 y altura 2 es: 12'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar la base al alert')
+    alert.should.have.string('2','Falta agregar la altura al alert')
+    alert.should.have.string('12','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });
 
@@ -25,9 +25,9 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"Ingresá el valor de la base del rectángulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del rectángulo');
-"Ingresá el valor de la altura del rectángulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del rectángulo');
-
-'El resultado del perímetro del rectángulo con base 8 y altura 4 es: 24'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('8','Falta agregar la base al alert')
+    alert.should.have.string('4','Falta agregar la altura al alert')
+    alert.should.have.string('24','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });/*#tests>*/
