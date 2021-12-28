@@ -3,15 +3,15 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 500 y 10 muestra `El porcentaje 10 del número 1000 es: 50` ", function() {
+it("si ingresamos 500 y 10 muestra `El porcentaje 10 del número 500 es: 50` ", function() {
 
-_stubPromptResponse_(1000);
+_stubPromptResponse_(500);
 _stubPromptResponse_(10);
 
 _resetDocument_();
 
 const alert = _shiftAlertMessage_();
-    alert.should.have.string('1000','Falta agregar el número al alert')
+    alert.should.have.string('500','Falta agregar el número al alert')
     alert.should.have.string('10','Falta agregar el porcentaje al alert')
     alert.should.have.string('50','Falta agregar el resultado al alert o el resultado es incorrecto')
 
