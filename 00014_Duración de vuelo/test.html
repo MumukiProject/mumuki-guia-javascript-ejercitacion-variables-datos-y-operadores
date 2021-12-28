@@ -14,15 +14,14 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"¿Cúal es la primer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir por una escala');
-"¿Cúal es la duración de la primer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir la duración de la primer escala');
-"¿Cúal es la segunda escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir por una escala');
-"¿Cúal es la duración de la segunda escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir la duración de la segunda escala');
-"¿Cúal es la tercer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir por una escala');
-"¿Cúal es la duración de la tercer escala?".should.eql(_shiftPromptMessage_(), 'Debería pedir la duración de la tercer escala');
-
-'La duración total del vuelo con escala en Tulum de duración 14 hs, Turquía de duración 20 hs y Egipto de duración 4 hs es: 38 hs'.should.eql(_shiftAlertMessage_())
-
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('Tulum','Falta agregar la primer escala al alert');
+    alert.should.have.string('14','Falta agregar la duración de la primer escala al alert');
+    alert.should.have.string('Turquía','Falta agregar la segunda escala al alert');
+    alert.should.have.string('20','Falta agregar la duración de la segunda escala al alert');
+    alert.should.have.string('Egipto','Falta agregar la tercer escala al alert');
+    alert.should.have.string('4','Falta agregar la duración de la tercer escala al alert');
+     
 });
 
 /*it("si ingresamos 50 muestra `Para la distancia 50 km en bicicleta el tiempo de viaje es 5 hora/s, a pie 10 hora/s y en auto 1 hora/s`", function() {
