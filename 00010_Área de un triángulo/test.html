@@ -3,18 +3,16 @@
 _resetUserInteractions_();
 })
 
-it("si ingresamos 2 y 4 muestra El resultado del área del triángulo con base 2 y altura 4 es: 4", function() {
+it("si ingresamos 4 y 6 muestra El resultado del área del triángulo con base 4 y altura 6 es: 12", function() {
 
-_stubPromptResponse_(2);
 _stubPromptResponse_(4);
+_stubPromptResponse_(6);
 
 _resetDocument_();
-
-"Ingresá el valor de la base del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del tríangulo');
-"Ingrese el valor de la altura del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del tríangulo');
-
-'El resultado del área del triángulo con base 2 y altura 4 es: 4'.should.eql(_shiftAlertMessage_())
-
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('4','Falta agregar la base al alert')
+    alert.should.have.string('6','Falta agregar la altura al alert')
+    alert.should.have.string('12','Falta agregar el resultado al alert o el resultado es incorrecto')
 });
 
 it("si ingresamos 8 y 4 muestra El resultado del área del triángulo con base 8 y altura 4 es: 16", function() {
@@ -25,9 +23,9 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"Ingresá el valor de la base del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la base del tríangulo');
-"Ingrese el valor de la altura del tríangulo".should.eql(_shiftPromptMessage_(), 'Debería pedir por la altura del tríangulo');
-
-'El resultado del área del triángulo con base 8 y altura 4 es: 16'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('8','Falta agregar la base al alert')
+    alert.should.have.string('4','Falta agregar la altura al alert')
+    alert.should.have.string('16','Falta agregar el resultado al alert o el resultado es incorrecto')
 
 });/*#tests>*/
