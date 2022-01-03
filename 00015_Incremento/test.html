@@ -11,15 +11,16 @@ it("si ingresamos 5 y 5, muestra 10, 15, 20, 25, 30", function() {
 
   _resetDocument_();
 
-  "Ingresá un número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
-  "Ingresá una cantidad".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');  
+  // const primerAlert = _shiftAlertMessage_();
+  _shiftAlertMessage_().should.have.string('10','Falta agregar el resultado al alert o no es correcta el resultado generado');
   
+  _shiftAlertMessage_().should.have.string('15','Falta agregar el resultado al alert o no es correcta el resultado generado');
   
-  'Incremento 1: 10'.should.eql(_shiftAlertMessage_())
-  'Incremento 2: 15'.should.eql(_shiftAlertMessage_())
-  'Incremento 3: 20'.should.eql(_shiftAlertMessage_())
-  'Incremento 4: 25'.should.eql(_shiftAlertMessage_())
-  'Incremento 5: 30'.should.eql(_shiftAlertMessage_())
+  _shiftAlertMessage_().should.have.string('20','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('25','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('30','Falta agregar el resultado al alert o no es correcta el resultado generado');
 
 });
 
@@ -31,15 +32,15 @@ it("si ingresamos 2 y 3, muestra 5, 8, 11, 14, 17", function() {
 
   _resetDocument_();
 
-  "Ingresá un número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
-  "Ingresá una cantidad".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');  
+   _shiftAlertMessage_().should.have.string('5','Falta agregar el resultado al alert o no es correcta el resultado generado');
   
+  _shiftAlertMessage_().should.have.string('8','Falta agregar el resultado al alert o no es correcta el resultado generado');
   
-  'Incremento 1: 5'.should.eql(_shiftAlertMessage_())
-  'Incremento 2: 8'.should.eql(_shiftAlertMessage_())
-  'Incremento 3: 11'.should.eql(_shiftAlertMessage_())
-  'Incremento 4: 14'.should.eql(_shiftAlertMessage_())
-  'Incremento 5: 17'.should.eql(_shiftAlertMessage_())
+  _shiftAlertMessage_().should.have.string('11','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('14','Falta agregar el resultado al alert o no es correcta el resultado generado');
+  
+  _shiftAlertMessage_().should.have.string('17','Falta agregar el resultado al alert o no es correcta el resultado generado');
 
 });
 
