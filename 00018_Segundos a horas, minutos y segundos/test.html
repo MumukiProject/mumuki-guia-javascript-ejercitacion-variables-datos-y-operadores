@@ -10,10 +10,13 @@ _stubPromptResponse_(8500)
 
 _resetDocument_();
 
-"Ingresá una cantidad de segundos".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('8500','Falta agregar una cantidad de segundos al alert');
+    alert.should.have.string('2','Falta agregar las horas al alert o el resultado no es el correcto');
+    alert.should.have.string('21','Falta agregar los minutos al alert o el resultado no es el correcto');
+    alert.should.have.string('40','Falta agregar los segundos al alert o el resultado no es el correcto');
 
-'8500 segundos son = 2 horas, 21 minutos y 40 segundos'.should.eql(_shiftAlertMessage_())
-
+alert.should.have.string('Turquía','Falta agregar la segunda escala al alert');
 });
 
 it("si ingresamos 19248, muestra 19248 segundos son = 5 horas, 20 minutos y 48 segundos", function() {
@@ -23,8 +26,10 @@ _stubPromptResponse_(19248)
 
 _resetDocument_();
 
-"Ingresá una cantidad de segundos".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
-
-'19248 segundos son = 5 horas, 20 minutos y 48 segundos'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('19248','Falta agregar una cantidad de segundos al alert');
+    alert.should.have.string('5','Falta agregar las horas al alert o el resultado no es el correcto');
+    alert.should.have.string('20','Falta agregar los minutos al alert o el resultado no es el correcto');
+    alert.should.have.string('48','Falta agregar los segundos al alert o el resultado no es el correcto');
 
 });/*#tests>*/
