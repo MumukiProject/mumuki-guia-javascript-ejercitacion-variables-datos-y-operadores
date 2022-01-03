@@ -11,10 +11,10 @@ _stubPromptResponse_(5)
 
 _resetDocument_();
 
-"Ingresá el primer número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
-"Ingresá el segundo número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
-
-'El número 20 es múltiplo de 5: true'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('20','Falta agregar el primer número al alert');
+    alert.should.have.string('5','Falta agregar el segundo número al alert');
+    alert.should.have.string('true','Falta agregar el resultado al alert o el resultado es incorrecto');
 
 });
 
@@ -26,9 +26,10 @@ _stubPromptResponse_(5);
 
 _resetDocument_();
 
-"Ingresá el primer número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
-"Ingresá el segundo número".should.eql(_shiftPromptMessage_(), 'Debería pedir por un número');
 
-'El número 21 es múltiplo de 5: false'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('21','Falta agregar el primer número al alert');
+    alert.should.have.string('5','Falta agregar el segundo número al alert');
+    alert.should.have.string('false','Falta agregar el resultado al alert o el resultado es incorrecto');
 
 });/*#tests>*/
