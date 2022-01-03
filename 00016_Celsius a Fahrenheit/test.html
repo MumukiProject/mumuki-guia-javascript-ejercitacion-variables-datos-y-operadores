@@ -10,9 +10,9 @@ _stubPromptResponse_(1);
 
 _resetDocument_();
 
-"Ingresá una cantidad de grados Celsius".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
-
-'La conversión de 1 grados Celsius a Fahrenheit es: 33.8'.should.eql(_shiftAlertMessage_())
+const alert = _shiftAlertMessage_();
+    alert.should.have.string('1','Falta agregar la  una cantidad de grados Celsius al alert');
+    alert.should.have.string('33.8','Falta agregar el resultado al alert o el resultado es incorrecto');
 
 });
 
@@ -23,8 +23,7 @@ _stubPromptResponse_(4);
 
 _resetDocument_();
 
-"Ingresá una cantidad de grados Celsius".should.eql(_shiftPromptMessage_(), 'Debería pedir por una cantidad');
-
-'La conversión de 4 grados Celsius a Fahrenheit es: 39.2'.should.eql(_shiftAlertMessage_())
+alert.should.have.string('4','Falta agregar la  una cantidad de grados Celsius al alert');
+    alert.should.have.string('39.2','Falta agregar el resultado al alert o el resultado es incorrecto');
 
 });/*#tests>*/
